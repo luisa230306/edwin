@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diccionario</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <div class="board">
+
+    <header>
+      <h1>Traductor :)</h1>
+    </header>
+
+ 
+    <main>
+  
+      <aside>
+        <label for="cate-select">Filtrar por categoría:</label>
+        <select id="cate-select">
+          <option value="">Todas las Categorías</option>
+          <option value="animals">Animals</option>
+          <option value="fruits">Fruits</option>
+          <option value="colors">Colors</option>
+          <option value="physical_descriptions">Physical Descriptions</option>
+          <option value="skills">Skills</option>
+          <option value="verbs">Verbs</option>
+        </select>
+
+        <label for="search-input">Buscar palabra:</label>
+        <input type="text" id="search-input" placeholder="Escribe palabra (English or Spanish)">
+        <button id="search-but">Buscar</button>
+
+      
+        <fieldset>
+          <legend>Selecciona el idioma de la traducción</legend>
+          <input type="radio" id="english" name="language" value="english" checked>
+          <label for="english">Inglés a Español</label>
+
+          <input type="radio" id="spanish" name="language" value="spanish">
+          <label for="spanish">Español a Inglés</label>
+        </fieldset>
+      </aside>
+
+   
+      <section>
+        <table id="resul-table">
+          <thead>
+            <tr>
+              <th>Primera</th>
+              <th>Segunda</th>
+              <th>Ejemplo</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+  
+      <section>
+        <h2>Agregar nueva palabra</h2>
+        <form id="add-word-form">
+          <label for="new-english">Inglés:</label>
+          <input type="text" id="new-english" required>
+
+          <label for="new-spanish">Español:</label>
+          <input type="text" id="new-spanish" required>
+
+          <label for="new-example">Ejemplo:</label>
+          <input type="text" id="new-example" required>
+
+          <label for="new-category">Categoría:</label>
+          <select id="new-category" required>
+            <option value="animals">Animals</option>
+            <option value="fruits">Fruits</option>
+            <option value="colors">Colors</option>
+            <option value="physical_descriptions">Physical Descriptions</option>
+            <option value="skills">Skills</option>
+            <option value="verbs">Verbs</option>
+          </select>
+
+          <button type="submit">Agregar</button>
+        </form>
+      </section>
+    </main>
+<br>
+    <footer>
+      <p>Creado por - Lui and Vale</p>
+    </footer>
+  </div>
+
+  <script type="module" src="./scripts/app.js"></script>
+</body>
+</html>
